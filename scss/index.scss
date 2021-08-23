@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 @import "header.scss";
+@import "presentation.scss";
 
 // Обнуление: общие параметры
 @import "null.scss";
@@ -25,17 +26,31 @@ body {
 }
 
 .button {
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s linear 0s;
+
 	&__downlaod {
 		width: 136px;
 		height: 52px;
 		background: #18216d;
-		border-radius: 6px;
 		color: #ffffff;
-		font-weight: 500;
-		font-size: 17px;
-		line-height: 20px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	}
+
+	&__presentation {
+		background: #00ecd0;
+		width: 180px;
+		height: 66px;
+		color: #18216d;
+	}
+
+	&:hover {
+		box-shadow: 5px 5px 6px rgb(0 0 0 / 30%);
+		opacity: 0.8;
 	}
 }

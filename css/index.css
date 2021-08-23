@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 .header {
-  position: absolute;
+  position: relative;
   width: 100%;
-  top: 0;
-  left: 0;
   z-index: 50;
-  padding: 25px 100px 0px;
+  padding: 25px 100px 65px;
 }
 .header__body {
   position: relative;
@@ -61,6 +59,9 @@
   font-size: 18px;
   line-height: 20px;
   color: #18216d;
+}
+.header__link:hover {
+  opacity: 0.8;
 }
 .header__link_sign-in {
   margin: 0px 45px 0px 0px;
@@ -209,6 +210,72 @@
     padding: 25px 0px 0px;
   }
 }
+.presentation {
+  padding: 0px 0px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 0px 0 0px 215px;
+}
+.presentation__info {
+  position: relative;
+  z-index: 2;
+  padding-top: 80px;
+}
+.presentation img {
+  position: absolute;
+  top: 0;
+  right: 197px;
+  width: 786px;
+  height: 518px;
+}
+.presentation h1 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 60px;
+  margin: 0px 0px 16px 0px;
+  max-width: 498px;
+}
+.presentation p {
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 28px;
+  max-width: 484px;
+  margin: 0px 0px 34px 0px;
+}
+
+@media (max-width: 1480px) {
+  .presentation {
+    padding: 0px 0 0px 50px;
+  }
+  .presentation img {
+    right: 50px;
+  }
+}
+@media (max-width: 1160px) {
+  .presentation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 768px;
+    margin: 0 auto;
+    padding: 0px 0px 0px 0px;
+  }
+  .presentation__info {
+    text-align: center;
+  }
+  .presentation img {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 41px 0px 0px 0px;
+  }
+}
 * {
   padding: 0px;
   margin: 0px;
@@ -317,12 +384,8 @@ body {
   position: relative;
 }
 
-.button__downlaod {
-  width: 136px;
-  height: 52px;
-  background: #18216d;
+.button {
   border-radius: 6px;
-  color: #ffffff;
   font-weight: 500;
   font-size: 17px;
   line-height: 20px;
@@ -335,4 +398,23 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.button__downlaod {
+  width: 136px;
+  height: 52px;
+  background: #18216d;
+  color: #ffffff;
+}
+.button__presentation {
+  background: #00ecd0;
+  width: 180px;
+  height: 66px;
+  color: #18216d;
+}
+.button:hover {
+  -webkit-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+  opacity: 0.8;
 }
